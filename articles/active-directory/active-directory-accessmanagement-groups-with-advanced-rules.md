@@ -163,6 +163,20 @@ Allowed operators
 | otherMails     | Any string value                      | (user.otherMails -contains "alias@domain")           |
 | proxyAddresses | SMTP: alias@domain smtp: alias@domain | (user.proxyAddresses -contains "SMTP: alias@domain") |
 
+## Using attributes to create rules for device objects
+You can also create a rule that selects device objects for membership in a group. The following device attributes can be used:
+
+| Poperties            | Allowed values                        | Usage                                                |
+|----------------------|---------------------------------------|------------------------------------------------------|
+| displayName          | any string value                      | (device.displayName -eq "Rob Iphone                  |
+| deviceOSType         | any string value                      | (device.deviceOSType -eq "IOS")                      |
+| deviceOSVersion      | any string value                      | (device.OSVersion -eq "9.1")                         |
+| isDirSynced          | true false null                       | (device.isDirSynced -eq "true")                      |
+| isManaged            | true false null                       | (device.isManaged -eq "false")                       |
+| isCompliant          | true false null                       | (device.isCompliant -eq "true")                      |
+
+Note these device rules cannot be created using the "simple rule" dropdown in the classic portal.
+
 ## Extension attributes and custom attributes
 Extension attributes and custom attributes are supported in dynamic membership rules.
 
