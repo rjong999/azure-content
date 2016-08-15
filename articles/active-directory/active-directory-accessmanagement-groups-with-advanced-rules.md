@@ -199,6 +199,19 @@ You can now populate members in a group based on the manager attribute of a user
 
 3. When saving this rule, all users that satisfy the rule will be joined as members of the group. It can take some minutes for the group to initially populate.
 
+##Using attributes to create rules for device objects
+You can also create a rule that selects device objects for membership in a group. The following device attributes can be used:
+
+| Poperties            | Allowed values                        | Usage                                                |
+|----------------------|---------------------------------------|------------------------------------------------------|
+| displayName          | any string value                      | (device.displayName -eq "Rob Iphone”                 |
+| deviceOSType         | any string value                      | (device.deviceOSType -eq "IOS")                      |
+| deviceOSVersion      | any string value                      | (device.OSVersion -eq "9.1")                         |
+| isDirSynced          | true false null                       | (device.isDirSynced -eq "true")                      |
+| isManaged            | true false null                       | (device.isManaged -eq "false")                       |
+| isCompliant          | true false null                       | (device.isCompliant -eq "true")                      |
+
+Note: these device rules cannot be created using the "simple rule" dropdown in the classic portal.
 
 ## Additional information
 These articles provide additional information on Azure Active Directory.
